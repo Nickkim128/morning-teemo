@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-morning-blue hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+  
+  .chat-message {
+    @apply p-4 rounded-lg mb-4 max-w-4xl;
+  }
+  
+  .chat-message.user {
+    @apply bg-morning-blue text-white ml-auto;
+  }
+  
+  .chat-message.assistant {
+    @apply bg-gray-100 text-gray-800 mr-auto;
+  }
+  
+  .news-card {
+    @apply bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200;
+  }
+  
+  .morning-gradient {
+    @apply bg-gradient-to-r from-morning-blue to-morning-orange;
+  }
+} 
